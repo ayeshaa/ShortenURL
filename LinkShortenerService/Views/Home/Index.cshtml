@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Shorten URL";
+}
+<h1>@ViewData["Title"]</h1>
+<script src="/js/ShortenLink.js"></script>
+
+<section>
+    <form method="post" action="/Home/Index" enctype="multipart/form-data" id="urlForm" style="width: 25rem">
+        <label>
+            Enter your link below to retrieve its short URL
+            <input type="url"
+                   id="url"
+                   name="url"
+                   style="width: 22rem; margin: 0.5rem 0" />
+        </label>
+
+        <input type="button" onclick="submitUrl()"
+                style="padding: 0.5rem 1rem" value="Shorten"/>
+        <br/>
+        <p><b id="urlResult"></b> &nbsp; <a href="/Statics/Index">Statistics </a></p>
+
+    </form>
+</section>
